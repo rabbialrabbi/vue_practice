@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="541e6133-8465-46bf-937a-b67752425742" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/vue.blade.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vue.blade.html" afterDir="false" />
     </list>
@@ -42,9 +41,10 @@
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.59" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -64,16 +64,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2390" />
-          <entry key="js" value="1724" />
+          <entry key="html" value="2554" />
+          <entry key="js" value="1767" />
           <entry key="php" value="456" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Blade" value="402" />
-          <entry key="HTML" value="2408" />
-          <entry key="JavaScript" value="1706" />
+          <entry key="HTML" value="2572" />
+          <entry key="JavaScript" value="1749" />
           <entry key="PHP" value="54" />
         </counts>
       </usages-collector>
@@ -86,8 +86,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/vue.blade.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="598">
-                  <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+                <state relative-caret-position="223">
+                  <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
                 </state>
               </provider>
             </entry>
@@ -95,8 +95,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="78">
-                  <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+                <state relative-caret-position="702">
+                  <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -108,8 +108,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resources/views/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="494">
-                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+                <state relative-caret-position="286">
+                  <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -126,8 +126,8 @@
       <list>
         <option value="$PROJECT_DIR$/resources/views/vue.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/vue.blade.html" />
         <option value="$PROJECT_DIR$/resources/views/main.js" />
+        <option value="$PROJECT_DIR$/resources/views/vue.blade.html" />
       </list>
     </option>
   </component>
@@ -288,11 +288,12 @@
       <workItem from="1559005862045" duration="549000" />
       <workItem from="1559006446677" duration="857000" />
       <workItem from="1559007361581" duration="2178000" />
+      <workItem from="1559083279862" duration="1947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34426000" />
+    <option name="totallyTimeSpent" value="36373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -313,7 +314,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32921812" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3281893" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.35185185" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -367,17 +368,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/vue.blade.html">
+    <entry file="file://$PROJECT_DIR$/resources/views/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        <state relative-caret-position="702">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/main.js">
+    <entry file="file://$PROJECT_DIR$/resources/views/vue.blade.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="223">
+          <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
         </state>
       </provider>
     </entry>

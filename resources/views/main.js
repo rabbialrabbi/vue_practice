@@ -1,9 +1,17 @@
 
-Vue.component('task-list',{
+Vue.component('message',{
 
-    template: `<div>
-                <task v-for="task in tasks">{{task.task}}</task>
-                </div>`,
+    props:['title', 'body'],
+
+    template: `<article class="message bulma">
+            <div class="message-header">
+                <p>{{title}}</p>
+                <button class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+                {{body}}
+            </div>
+        </article>`,
 
     data(){
         return{
