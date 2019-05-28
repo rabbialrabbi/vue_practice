@@ -12,26 +12,12 @@
 <body>
 
 <div id="root">
-<h2>All Tasks:</h2>
-    <ul>
-        <li v-for="task in tasks" v-text="task.task"></li>
-    </ul>
-
-    <h2>Complete Tasks :</h2>
-    <ul>
-        <li v-for="task in completeList" >{{task.task}} <button @click="task.Completed=false"> inComplete</button> </li>
-    </ul>
-
-    <h2>Incomplete Tasks :</h2>
-    <ul>
-        <li v-for="task in incompleteList">{{task.task}} <button @click="task.Completed=true"> Complete</button> </li>
-    </ul>
+    <task-list></task-list>
 </div>
 
 
 <script src="../js/vue.js"></script>
 <script src="main.js"></script>
-https://github.com/rabbialrabbi/vue_practice.git
 
 </body>
 </html>

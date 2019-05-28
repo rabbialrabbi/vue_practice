@@ -1,34 +1,31 @@
 
+Vue.component('task-list',{
+
+    template: `<div>
+                <task v-for="task in tasks">{{task.task}}</task>
+                </div>`,
+
+    data(){
+        return{
+            tasks:[
+                {task: 'Buy a Computer', completer: false},
+                {task: 'Buy a Mouse', completer: true},
+                {task: 'Buy a Keyboard', completer: true},
+                {task: 'Buy a Table', completer: true},
+                {task: 'Buy a Chair', completer: false},
+            ]
+        }
+    }
+});
+
+Vue.component('task',{
+
+    template: '<li><slot></slot></li>',
+});
 
 
 let app = new Vue({
-   el:'#root',
-    data:{
-        tasks:[
-            {task:'Buy a Table', Completed:true},
-            {task:'Buy a PC', Completed:false},
-            {task:'Buy a Keyboard', Completed:true},
-            {task:'Buy a SSD', Completed:false},
-            {task:'Buy a Mobile', Completed:false},
-        ]
-    },
-    methods:{
-       action(){
-           this.classChange = true
-       }
-    },
-    computed:{
-       completeList(){
-          return this.tasks.filter(task =>  task.Completed);
-          // return this.tasks.filter(function (task) {
-          //     return ! task.Completed;
-          // })
-
-       },
-        incompleteList(){
-            return this.tasks.filter(task => ! task.Completed);
-        }
-    }
+   el:'#root'
 
    });
 
