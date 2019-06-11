@@ -12,13 +12,13 @@
 <body>
 
 <div id="app">
-    <example-component></example-component>
+    <ul>
+        <li v-for="skill in skills">@{{skill}}</li>
+    </ul>
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-
-<script src="{{asset('js/app.js')}}"> </script>
-
+<script src="{{ mix('js/app.js') }}"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>
