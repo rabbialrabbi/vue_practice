@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('vue');
 });
+
+Route::get('/skills', function () {
+    return ['JS', 'PHP', 'SQL','Vue'];
+});
+
+Route::get('/project/create', 'projectController@create');
+Route::post('/project', 'projectController@store');
