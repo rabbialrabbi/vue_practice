@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('vue');
+    return redirect('/project/create');
 });
 
 Route::get('/skills', function () {

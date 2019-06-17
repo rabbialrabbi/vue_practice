@@ -12,27 +12,39 @@
 <body>
 
 <div id="app" class="container mt-5">
-    <form action="" method="post" @submit.prevent="onSubmit" @keydown="error.clear($event.target.name)">
+
+    <div>
+        <h1>Project Details:</h1>
+        <ul>
+            @foreach($project as $p)
+            <li>{{$p->name}}</li>
+            @endforeach
+        </ul>
+    </div>
+
+    <form action="/project" method="post" @submit.prevent="onSubmit" @keydown="form.error.clear($event.target.name)">
+        @csrf
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name"  name="name" v-model="name">
-            <span v-if="error.has('name')">@{{ error.get('name') }}</span>
+            <input type="text" class="form-control" id="name"  name="name" v-model="form.name" >
+            <span  class="text-danger" v-if="form.error.has('name')">@{{ form.error.get('name') }}</span>
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <input type="text" class="form-control" id="description" name="description" v-model="description">
-            <span v-if="error.has('description')">@{{ error.get('description') }}</span>
+            <input type="text" class="form-control" id="description" name="description" v-model="form.description">
+            <span class="text-danger " v-if="form.error.has('description')">@{{ form.error.get('description') }}</span>
 
         </div>
 
-        <button type="submit" class="btn btn-primary" :disabled="error.any()">Submit</button>
+        <button type="submit" class="btn btn-primary" :disabled="form.error.any()">Submit</button>
     </form>
 </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="js/app.js"> </script>
+<script src="{{asset('js/app.js')}}"> </script>
 
 </body>
 </html>
+
