@@ -13,31 +13,9 @@
 
 <div id="app" class="container mt-5">
 
-    <div>
-        <h1>Project Details:</h1>
-        <ul>
-            @foreach($project as $p)
-            <li>{{$p->name}}</li>
-            @endforeach
-        </ul>
-    </div>
+    <cupon  @input="update"></cupon>
 
-    <form action="/project" method="post" @submit.prevent="onSubmit" @keydown="form.error.clear($event.target.name)">
-        @csrf
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name"  name="name" v-model="form.name" >
-            <span  class="text-danger" v-if="form.error.has('name')">@{{ form.error.get('name') }}</span>
-        </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <input type="text" class="form-control" id="description" name="description" v-model="form.description">
-            <span class="text-danger " v-if="form.error.has('description')">@{{ form.error.get('description') }}</span>
-
-        </div>
-
-        <button type="submit" class="btn btn-primary" :disabled="form.error.any()">Submit</button>
-    </form>
+    <p>@{{ input }}</p>
 </div>
 
 

@@ -1,29 +1,43 @@
 import Vue from 'vue';
-import axios from 'axios';
-import Form from './components/Form';
 
-window.Form = Form;
-window.axios = axios;
+Vue.component('cupon',{
 
-
-
-
-new Vue({
-    el:'#app',
-
-    data:{
-        form : new Form({
-            name : '',
-            description : ''
-        })
+    template: `
+    <input type="text" name="" :value ="input" @input="onType($event.target.value)">
+    `,
+    data(){
+        return{
+            invalid:['allfree','premium'],
+            input: '',
+        }
     },
 
-    methods: {
+    methods:{
+        onType(value){
+            if(this.invalid.includes(value) ){
+                alert('Operation Successfull');
+                this.input = '';
+                this.$emit('input', this.input);
+                return;
+            }
+            this.input = value ;
+            this.$emit('input', this.input);
 
-        onSubmit() {
-            this.form.onSubmit('post','/project')
-                .then(resorse=>console.log(resorse.message))
-                .catch(error =>console.log(error));
+        }
+    }
+
+
+});
+
+
+var app = new Vue({
+    el:'#app',
+    data:{
+        input: ''
+    },
+    methods: {
+        update(data){
+            this.input = data
         }
     }
 });
