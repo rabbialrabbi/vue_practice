@@ -12562,37 +12562,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('cupon', {
-  template: "\n    <input type=\"text\" name=\"\" :value =\"input\" @input=\"onType($event.target.value)\">\n    ",
-  data: function data() {
-    return {
-      invalid: ['allfree', 'premium'],
-      input: ''
-    };
-  },
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('coupon', {
+  props: ['value'],
+  template: "\n        <input type=\"text\"\n               :value=\"value\"\n               @input=\"updateCode($event.target.value)\"\n               ref=\"input\">\n    ",
   methods: {
-    onType: function onType(value) {
-      if (this.invalid.includes(value)) {
-        alert('Operation Successfull');
-        this.input = '';
-        this.$emit('input', this.input);
-        return;
+    updateCode: function updateCode(code) {
+      if (code === 'google') {
+        alert('Find the number');
+        this.$refs.input = code = ' '; //Only code='' also possible
       }
 
-      this.input = value;
-      this.$emit('input', this.input);
+      this.$emit('input', code);
     }
   }
 });
-var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
+new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
   data: {
-    input: ''
-  },
-  methods: {
-    update: function update(data) {
-      this.input = data;
-    }
+    coupon: 'FREEBIE' // Maybe from DB or querystring.
+
   }
 });
 

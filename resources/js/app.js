@@ -1,43 +1,32 @@
 import Vue from 'vue';
-
-Vue.component('cupon',{
+Vue.component('coupon', {
+    props: ['value'],
 
     template: `
-    <input type="text" name="" :value ="input" @input="onType($event.target.value)">
+        <input type="text"
+               :value="value"
+               @input="updateCode($event.target.value)"
+               ref="input">
     `,
-    data(){
-        return{
-            invalid:['allfree','premium'],
-            input: '',
-        }
-    },
 
-    methods:{
-        onType(value){
-            if(this.invalid.includes(value) ){
-                alert('Operation Successfull');
-                this.input = '';
-                this.$emit('input', this.input);
-                return;
+    methods: {
+        updateCode(code) {
+            if(code === 'google'){
+                alert('Find the number');
+
+                this.$refs.input = code= ' ' ; //Only code='' also possible
             }
-            this.input = value ;
-            this.$emit('input', this.input);
 
+            this.$emit('input', code);
         }
     }
-
-
 });
 
 
-var app = new Vue({
-    el:'#app',
-    data:{
-        input: ''
-    },
-    methods: {
-        update(data){
-            this.input = data
-        }
+new Vue({
+    el: '#app',
+
+    data: {
+        coupon: 'FREEBIE' // Maybe from DB or querystring.
     }
 });

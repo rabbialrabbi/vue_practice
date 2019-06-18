@@ -13,9 +13,9 @@
 
 <div id="app" class="container mt-5">
 
-    <cupon  @input="update"></cupon>
+    <coupon  v-model="coupon"></coupon>
 
-    <p>@{{ input }}</p>
+    <p>@{{ coupon }}</p>
 </div>
 
 
