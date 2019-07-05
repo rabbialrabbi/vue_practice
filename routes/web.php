@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return redirect('/project/create');
+    return view('welcome');
 });
 
 Route::get('/skills', function () {
